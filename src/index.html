@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="nl">
+
+<head>
+  <meta charset="utf-8">
+  <title>Kevin Nunes da Silva portfolio</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+</head>
+
+<body>
+  <section>
+    <app-root></app-root>
+  </section>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.5/waypoints.min.js"></script>
+  <script src="https://kit.fontawesome.com/3c707060d8.js" crossorigin="anonymous"></script>
+  <script>
+$(document).ready(function () {    
+  $('#s1').addClass("active");
+
+$("#s1").click(function () {
+  setTimeout(function () {
+    $(".nav-bar .item").removeClass("active");
+    $("#s1").addClass("active");
+  });
+});
+$("#s2").click(function () {
+  setTimeout(function () {
+    $(".nav-bar .item").removeClass("active");
+    $("#s2").addClass("active");
+  });
+
+});
+$("#s3").click(function () {
+  setTimeout(function () {
+    $(".nav-bar .item").removeClass("active");
+    $("#s3").addClass("active");
+  });
+});
+});
+
+  </script>
+</body>
+
+</html>

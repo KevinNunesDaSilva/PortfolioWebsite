@@ -1,0 +1,25 @@
+a{
+    background-color: #121212;
+    color: #9E9E9E;
+    border-radius: 10px;
+    border: none;
+    transition: 0.5s;
+    text-decoration: none;
+  }
+  a:hover{
+    background-color: #322C3A;
+    color: #B97CCC;
+    transition: 0.5s;
+    text-decoration: none;
+  }
+  i{
+      color: #9E9E9E;
+      z-index: 999;
+      font-size: 60px;
+      transition: 0.5s;
+  }
+  i:hover{
+    color: #B97CCC;
+    transition: 0.5s;
+  }
+  

@@ -1,0 +1,21 @@
+<!-- <h2>My Websites</h2>
+<ul class="websites">
+  <li *ngFor="let website of websites">
+    <a routerLink="/detail/{{website.id}}">
+      <span class="badge">{{website.id}}</span> {{website.name}}
+    </a>
+  </li>
+</ul> -->
+<div class="row px-5 pt-5">
+<h1 class="text-center mb-5">Projecten</h1>
+  <div class="col-md-6 p-2" *ngFor="let website of websites" routerLink="/detail/{{website.id}}">
+    <div class="w-100 position-relative item" style="background-image: url('../../assets/images/{{website.name}}.png');">
+      <div class="grey-overlay position-absolute">
+        <div class="text full-center text-center">
+        <h3 class="mb-4">{{website.name}}</h3>
+        <p>{{website.description}}</p>
+        </div>
+    </div>
+    </div>
+  </div>
+</div>

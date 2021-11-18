@@ -1,0 +1,23 @@
+<!-- <div *ngIf="website">
+  <h2>{{website.name | uppercase}} Details</h2>
+  <div><span>id: </span>{{website.id}}</div>
+  <div>
+    <label for="website-name">Website name: </label>
+    <input id="website-name" [(ngModel)]="website.name" placeholder="Website name"/>
+  </div>
+  <button (click)="goBack()">go back</button>
+</div> -->
+<div class="details" *ngIf="website">
+  <div class=" position-relative">
+    <div class="banner bfp" style="background-image: url('../../assets/images/{{website.name}}.png');">
+
+    </div>
+    <div class="banner-image bfp position-absolute full-center"
+      style="background-image: url('../../assets/images/{{website.name}}.png');"></div>
+  </div>
+  <div class="container position-relative">
+    <a href=""><i class="fas fa-solid fa-arrow-left position-absolute mt-2"></i></a>
+      <h1 class="w-100 text-center mt-2">{{website.name}}</h1>
+      <a class="px-4 py-2" href="https://www.modus-digital.com/">Bezoek {{website.name}}</a>
+  </div>
+</div>
