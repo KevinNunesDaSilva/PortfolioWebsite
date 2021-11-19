@@ -1,6 +1,13 @@
 <div class="container">
     <h1>Todo List</h1>
     <ul>
-        <li></li>
+        <li *ngFor="let todoitem of todoitems" class="mb-2">
+            <div class="span d-flex">
+                <div class="checkbox position-relative">
+                    <input type="checkbox" class="checkbox-round full-center">
+                </div>
+                <span class="item-name">{{todoitem.name}}</span>
+            </div>
+        </li>
     </ul>
 </div>
