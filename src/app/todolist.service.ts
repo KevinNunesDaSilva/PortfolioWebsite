@@ -10,12 +10,12 @@ import { MessageService } from './message.service';
 
 @Injectable({ providedIn: 'root' })
 export class TodoitemService {
-  private heroesUrl = 'api/heroes';
+  private todoitemsUrl = 'api/todoitems';
   constructor(private http: HttpClient, private messageService: MessageService) { }
 
   getTodoitems(): Observable<Todoitem[]> {
     const todoitems = of(TODOITEMS);
-    return this.http.get<Todoitem[]>(this.heroesUrl);
+    return this.http.get<Todoitem[]>(this.todoitemsUrl);
   }
 
   getTodoitem(id: number): Observable<Todoitem> {

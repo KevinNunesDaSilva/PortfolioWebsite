@@ -10,13 +10,12 @@ import { MessageService } from './message.service';
 
 @Injectable({ providedIn: 'root' })
 export class WebsiteService {
-
-  constructor(private messageService: MessageService) { }
+  private websitesUrl = 'api/websites';
+  constructor(private http: HttpClient, private messageService: MessageService) { }
 
   getWebsites(): Observable<Website[]> {
     const websites = of(WEBSITES);
-    this.messageService.add('WebsiteService: fetched websites');
-    return websites;
+    return this.http.get<Website[]>(this.websitesUrl);
   }
 
   getWebsite(id: number): Observable<Website> {
