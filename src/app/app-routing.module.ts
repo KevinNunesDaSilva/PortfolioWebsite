@@ -5,7 +5,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { WebsitesComponent } from './websites/websites.component';
 import { WebsiteDetailComponent } from './website-detail/website-detail.component';
 import { ContactComponent } from './contact/contact.component';
-import { TodolistComponent } from './todolist/todolist.component';
+import { TodolistsComponent } from './todolists/todolists.component';
+import { TodolistDetailComponent } from './todolist-detail/todolist-detail.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
@@ -13,7 +14,8 @@ const routes: Routes = [
   { path: 'detail/:id', component: WebsiteDetailComponent },
   { path: 'websites', component: WebsitesComponent },
   { path: 'contact', component: ContactComponent },
-  { path: 'todolist', component: TodolistComponent }
+  { path: 'todolist', component: TodolistsComponent },
+  { path: 'todolist/:id', component: TodolistDetailComponent }
 ];
 
 @NgModule({
