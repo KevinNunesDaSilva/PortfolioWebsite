@@ -13,7 +13,7 @@ export class WebsitesComponent implements OnInit {
 
   constructor(private websiteService: WebsiteService) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.getWebsites();
   }
 
@@ -21,4 +21,19 @@ export class WebsitesComponent implements OnInit {
     this.websiteService.getWebsites()
     .subscribe(websites => this.websites = websites);
   }
+
+  add(name: string): void {
+    name = name.trim();
+    if (!name) { return; }
+    this.websiteService.addWebsite({ name } as Website)
+      .subscribe(website => {
+        this.websites.push(website);
+      });
+  }
+
+  delete(website: Website): void {
+    this.websites = this.websites.filter(h => h !== website);
+    this.websiteService.deleteWebsite(website.id).subscribe();
+  }
+
 }

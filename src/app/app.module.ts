@@ -9,10 +9,11 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { WebsiteDetailComponent } from './website-detail/website-detail.component';
 import { WebsitesComponent } from './websites/websites.component';
 import { MessagesComponent } from './messages/messages.component';
+import { TodolistsComponent } from './todolists/todolists.component';
 
 import { AppRoutingModule } from './app-routing.module';
 import { ContactComponent } from './contact/contact.component';
-import { TodolistComponent } from './todolist/todolist.component';
+import { TodolistDetailComponent } from './todolist-detail/todolist-detail.component';
 
 @NgModule({
   imports: [
@@ -32,7 +33,8 @@ import { TodolistComponent } from './todolist/todolist.component';
     WebsiteDetailComponent,
     MessagesComponent,
     ContactComponent,
-    TodolistComponent
+    TodolistsComponent,
+    TodolistDetailComponent
   ],
   bootstrap: [ AppComponent ]
 })

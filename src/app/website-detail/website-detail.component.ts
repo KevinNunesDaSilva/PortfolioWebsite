@@ -24,12 +24,19 @@ export class WebsiteDetailComponent implements OnInit {
   }
 
   getWebsite(): void {
-    const id = Number(this.route.snapshot.paramMap.get('id'));
+    const id = parseInt(this.route.snapshot.paramMap.get('id')!, 10);
     this.websiteService.getWebsite(id)
       .subscribe(website => this.website = website);
   }
 
   goBack(): void {
     this.location.back();
+  }
+
+  save(): void {
+    if (this.website) {
+      this.websiteService.updateWebsite(this.website)
+        .subscribe(() => this.goBack());
+    }
   }
 }
