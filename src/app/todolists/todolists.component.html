@@ -1,12 +1,12 @@
 <div class="container">
     <h1>Todo List</h1>
     <ul>
-        <li *ngFor="let todoitem of todoitems" class="mb-2">
-            <div class="span d-flex">
+        <li *ngFor="let todolist of todolists" class="mb-2">
+            <div class="span d-flex" routerLink="/todolist/{{todolist.id}}">
                 <div class="checkbox position-relative">
                     <input type="checkbox" class="checkbox-round full-center">
                 </div>
-                <span class="item-name">{{todoitem.name}}</span>
+                <span class="item-name">{{todolist.name}}</span>
             </div>
         </li>
     </ul>
